@@ -27,7 +27,7 @@
 
 									<div class="col-sm-4">
 																			<?
-										$menu = "SELECT dealer_name FROM dealer where dealer_id = '   ' ";
+										$menu = "SELECT dealer_name FROM dealer where dealer_id = $_GET[dealer_id] ";
 										$st = mysql_query($menu);
 										$rmenu = mysql_fetch_array($st);
 									?>

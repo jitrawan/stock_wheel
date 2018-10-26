@@ -1,15 +1,14 @@
 <?
-session_start();
 if (!isset($_SESSION['fname'])) {
   ?>
         <script>
-          alert('Please Login!')
-          window.location.href = "main_New.php";
+          alert('Please Login')
+         window.location.href = "main_New.php";
         </script>
         <?
 }else {
-  $now = time();
-
+  $now = now();
+  
   if ($now > $_SESSION['expire']) {
       session_destroy();
       ?>

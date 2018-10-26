@@ -1,10 +1,35 @@
 <?
 session_start();
-if(isset($_GET["Type"])){
-    if($_GET["Type"] != 'Logout'){
-        include "../CheckSession.php";
-    }
-}
+
+    if (!isset($_SESSION['fname'])) {
+    ?>
+         <script>
+          alert('Please Login');
+          
+        </script>
+        <?
+    }else {
+      
+        $now = Time();
+        $mins = ($_SESSION['expire'] - $now) / 60;
+        ?>
+        <script>
+              //alert('now :: <?=$mins?>')
+             
+            </script>
+        <?
+        if ($now > $_SESSION['expire']) {
+            session_destroy();
+            ?>
+            <script>
+              alert('SESSION Time Out Please Login!')
+              window.location.href = "main_New.php";
+            </script>
+
+            <?
+        }
+        }
+
 ?>
 <style>
 body{
