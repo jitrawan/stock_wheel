@@ -18,31 +18,7 @@
                                     	<!--<div class="clearfix">
 											<div class="pull-right tableTools-container"></div>
 										</div>-->
-										<?
-										$num_rec_per_page=5;
-										if (isset($_GET["paging"])) 
-												{ 
-											$page  = $_GET["paging"];   //get value of page
-											
-												} 
-										else { 
-												$page = 1;    //if first page then set 1
-											}
-											$start_from = (1-1) * $num_rec_per_page; 
-
-											$psql = "SELECT * FROM dealer";   
-											$rs_result=mysql_query($psql);   
-											$total_records = mysql_num_rows($rs_result);  
-											$total_pages = ceil($total_records / $num_rec_per_page); 
-
-											echo "<a href='test.php?paging=1'>".'|<'."</a> "; // Goto 1st page  
-											for ($i=1; $i<=$total_pages; $i++) 
-										{ 
-											echo "<a href='test.php?paging=".$i."'>".$i."</a> "; 
-										} 
-											echo "<a href='test.php?paging=$total_pages'>".'>|'."</a> "; // Goto last page
-
-										?>
+									<div style="height: 500px; overflow: scroll;">	
 										<table id="dynamic-table" class="table table-striped table-bordered table-hover">
 												<thead>
 													<tr>
@@ -55,7 +31,7 @@
 												<tbody>
 												<?
 
-													$sql_dealer = "SELECT * FROM dealer where status != 'C' LIMIT $start_from, $num_rec_per_page ";
+													$sql_dealer = "SELECT * FROM dealer where status != 'C' order by date_dealer";
 													$st_dealer = mysql_query($sql_dealer);
 													while($row_dealer = mysql_fetch_array($st_dealer)){
 													?>
@@ -78,9 +54,14 @@
 													<? } ?>
 												</tbody>
 										</table>
+										</div>
+									
 									</div><!-- /.span -->
 								</div><!-- /.row -->
 
 							</div>
 						</div>
 					</div><!-- /.page-content -->
+
+
+					

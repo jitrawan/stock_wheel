@@ -10,7 +10,7 @@
     <script src="../assets/New_js/bootstrap.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="Css/select2.min.css">
     <link rel="stylesheet" href="Css/datepicker.min.css">
