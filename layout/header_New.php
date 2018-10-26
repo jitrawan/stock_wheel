@@ -1,10 +1,9 @@
 <?
+session_start();
 if(isset($_GET["Type"])){
     if($_GET["Type"] != 'Logout'){
         include "../CheckSession.php";
     }
-}else{
-    include "../CheckSession.php";
 }
 ?>
 <style>

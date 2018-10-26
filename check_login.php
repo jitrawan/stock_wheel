@@ -17,7 +17,9 @@
 			$_SESSION["fname"] = $objResult["fname"];
 			$_SESSION["lname"] = $objResult["lname"];
 			$_SESSION["status"] = $objResult["status"];
-
+			//set timeout
+			$_SESSION['start'] = time();
+            $_SESSION['expire'] = $_SESSION['start'] + (30 * 60);
 			session_write_close();
 			
 			header("location:layout/main_New.php");
