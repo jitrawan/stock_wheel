@@ -81,7 +81,7 @@
                 <form name="add_supplier" action="add_supplier.php" method="post" enctype="multipart/form-data" onsubmit="checkForm(); return false;">
                     <div>
                         <div id="user-profile-1" class="user-profile row">
-                            <div class="col-xs-12 col-sm-3 center">
+                            <!--div class="col-xs-12 col-sm-3 center">
                                 <div>
                                     <script language="JavaScript">
                                         function showPreview(ele) {
@@ -109,9 +109,9 @@
 
                                 </div>
 
-                            </div>
+                            </div-->
 
-                            <div class="col-xs-12 col-sm-9">
+                            <div class="center center-contant">
 
                                 <div class="profile-user-info profile-user-info-striped">
                                     <div class="profile-info-row">

@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['fname'])) {
   ?>
         <script>
-          alert('Please Login!1')
+          alert('Please Login!')
           window.location.href = "main_New.php";
         </script>
         <?
@@ -14,14 +14,14 @@ if (!isset($_SESSION['fname'])) {
       session_destroy();
       ?>
       <script>
-        alert('Please Login!2')
+        alert('SESSION Time Out Please Login!')
         window.location.href = "main_New.php";
       </script>
       <?
   }else {
     ?>
       <script>
-        alert('Wellcome')
+        //alert('Wellcome')
        
       </script>
       <?

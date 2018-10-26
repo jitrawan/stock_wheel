@@ -17822,3 +17822,8 @@ input.typeahead.scrollable~.tt-dropdown-menu{
         display:none!important
     }
 }
+.center-contant{
+    margin: auto !important;
+    width: 80% !important;
+    padding: 10px !important;
+}

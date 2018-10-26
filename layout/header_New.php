@@ -69,7 +69,7 @@ body{
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-           <a class="navbar-brand" href="#">ร้านล้อยาง</a>
+           <a class="navbar-brand" href="main_New.php">ร้านล้อยาง</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

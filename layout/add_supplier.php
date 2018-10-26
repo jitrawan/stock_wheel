@@ -15,17 +15,14 @@
         </script>
 <?
 		}else{ 
-			if($_FILES['applicant_files']['name'] != ''){
+			/*if($_FILES['applicant_files']['name'] != ''){
 				$sur = strrchr($_FILES['applicant_files']['name'], ".");
 				$newfilename = (Date("dmy_His").$sur);
 				copy($_FILES["applicant_files"]["tmp_name"],"dealer/".$newfilename);
 				$file_img = "dealer/".$newfilename;
 				$resule = true;
-			}
-			
-			if($resule){
-			
-				$strSQL = "INSERT INTO dealer (dealer_code,dealer_id, dealer_name, mobile, address, districts, amphures, provinces, zipcode, contact, idline, email, contact_mobile, pic, status, date_dealer) VALUES ('".$_POST["dealer_code"]."',NULL, '".$_POST["dealer_name"]."', '".$_POST["mobile"]."', '".$_POST["address"]."', '".$_POST["districts"]."', '".$_POST["amphures"]."', '".$_POST["provinces"]."', '".$_POST["zipcodes"]."',  '".$_POST["contact"]."', '".$_POST["idline"]."', '".$_POST["email"]."', '".$_POST["contact_mobile"]."', '".$file_img."', '', NOW())";
+			}*/
+			$strSQL = "INSERT INTO dealer (dealer_code,dealer_id, dealer_name, mobile, address, districts, amphures, provinces, zipcode, contact, idline, email, contact_mobile, status, date_dealer) VALUES ('".$_POST["dealer_code"]."',NULL, '".$_POST["dealer_name"]."', '".$_POST["mobile"]."', '".$_POST["address"]."', '".$_POST["districts"]."', '".$_POST["amphures"]."', '".$_POST["provinces"]."', '".$_POST["zipcodes"]."',  '".$_POST["contact"]."', '".$_POST["idline"]."', '".$_POST["email"]."', '".$_POST["contact_mobile"]."', '', NOW())";
 				$objQuery = mysql_query($strSQL);
 				if (!$objQuery) {
 					die('Invalid query: ' . mysql_error($strSQL));
@@ -33,7 +30,7 @@
 				}else{
 					$resule = true;
 				}
-			}
+
 			if($resule){
 				$sqlpro="Select dealer_id from dealer where dealer_code = '".$_POST["dealer_code"]."' ";
 				$rspro=mysql_query($sqlpro);
@@ -52,7 +49,7 @@
 	    <script>
 			alert("บันทึกข้อมูลเรียบร้อยแล้ว");
 			//window.history.back();
-			window.location.href = "main.php?page=form_dealer_product&dealer_id=<? echo $row['dealer_id']?>";
+			window.location.href = "main_New.php?page=form_dealer_product&dealer_id=<? echo $row['dealer_id']?>";
         </script>
 <?
 		
