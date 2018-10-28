@@ -39,7 +39,7 @@
                                                     	<td style="text-align: left;"><?=$row_dealer['dealer_name'];?></td>
                                                     	<td class="center"><?=$row_dealer['mobile'];?></td>
                                                         <td class="center">
-															<a href="list_dealer_product.php?dealer_id=<?=$row_dealer['dealer_id'];?>" class="btn btn-grey btn-xs"><i class="glyphicon glyphicon-th-list bigger-110"></i> รายการสินค้า</a>
+															<a href="main_New.php?page=form_dealer_product&dealer_id=<?=$row_dealer['dealer_id'];?>" class="btn btn-grey btn-xs"><i class="glyphicon glyphicon-th-list bigger-110"></i> รายการสินค้า</a>
                                                         </td>
 														<td>
                                                         	<a href="view_dealer.php?dealer_id=<?=$row_dealer['dealer_id'];?>" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-search bigger-110"></i></a>
